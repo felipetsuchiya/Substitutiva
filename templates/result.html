@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5 result-container">
+        <h2>Resultados</h2>
+        <p>Classifier: {{ classifier }}</p>
+        <p>Accuracy: {{ accuracy }}</p>
+        <p>Macro Average F1-Score: {{ f1_score }}</p>
+        <div class="mt-4">
+            <h4>Confusion Matrix</h4>
+            <img src="data:image/png;base64,{{ img_data }}" alt="Confusion Matrix">
+        </div>
+        <a href="/" class="btn btn-back"></a>
+    </div>
+</body>
+</html>
